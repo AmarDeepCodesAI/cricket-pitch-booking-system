@@ -63,24 +63,30 @@ A real-time cricket pitch booking platform that allows users to check pitch avai
 
 ---
 
-# 📂 Project Structure
-
-```bash
+📂 Project Structure
 cricket-pitch-booking-system
 │
-├── app/
-│   ├── book-pitch/
-│   ├── dashboard/
-│   ├── login/
-│   ├── register/
-│   ├── my-bookings/
-│   ├── components/
-│   ├── context/
-│   ├── services/
-│   ├── types/
-│   └── lib/
+├── frontend/
+│   ├── app/
+│   │   ├── book-pitch/
+│   │   ├── dashboard/
+│   │   ├── login/
+│   │   ├── register/
+│   │   ├── my-bookings/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── services/
+│   │   ├── types/
+│   │   └── lib/
+│   │
+│   ├── public/
+│   ├── package.json
+│   ├── next.config.ts
+│   └── tsconfig.json
 │
 ├── backend/
+│   ├── prisma/
+│   │
 │   ├── src/
 │   │   ├── config/
 │   │   ├── controllers/
@@ -90,18 +96,17 @@ cricket-pitch-booking-system
 │   │   ├── sockets/
 │   │   └── server.ts
 │   │
-│   └── package.json
+│   ├── package.json
+│   └── tsconfig.json
 │
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-# ⚙️ Setup Instructions
-
-## Clone Repository
-
-```bash
+## ⚙️ Setup Instructions
+Clone Repository
 git clone https://github.com/AmarDeepCodesAI/cricket-pitch-booking-system.git
 
 cd cricket-pitch-booking-system
@@ -110,18 +115,15 @@ cd cricket-pitch-booking-system
 ---
 
 ## Frontend Setup
+cd frontend
 
-```bash
 npm install
 
 npm run dev
-```
 
 Frontend runs on:
 
-```bash
 http://localhost:3000
-```
 
 ---
 
