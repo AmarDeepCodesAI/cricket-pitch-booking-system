@@ -4,6 +4,21 @@ A real-time cricket pitch booking platform that allows users to check pitch avai
 
 ---
 
+# 📸 Application Screenshots
+# Home Page
+<img width="1882" height="913" alt="image" src="https://github.com/user-attachments/assets/1180453e-44b4-4e84-a379-41cee3e16ff9" />
+# Register Page
+<img width="1915" height="917" alt="image" src="https://github.com/user-attachments/assets/0ef8aa24-c6cd-4033-8099-0c61d7eadfaa" />
+# Login Page
+<img width="1911" height="932" alt="image" src="https://github.com/user-attachments/assets/c3d5cec3-66af-4d1e-b9bb-48e3b319b99b" />
+# Dashboard Page
+<img width="1897" height="905" alt="image" src="https://github.com/user-attachments/assets/af953cd1-669b-4f97-bdb4-5da994a7a6b2" />
+# Pitches Page
+<img width="1908" height="925" alt="image" src="https://github.com/user-attachments/assets/b17c427e-29ba-4744-bac9-ba615078113a" />
+# My Booking Page
+<img width="1892" height="913" alt="image" src="https://github.com/user-attachments/assets/79bcaea1-8de3-4825-96c4-2f1ceddbee44" />
+
+
 ## 🚀 Features
 
 ### Authentication
