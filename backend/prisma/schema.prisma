@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum SlotStatus {
+  AVAILABLE
+  RESERVED
+  BOOKED
+}
+
+enum BookingStatus {
+  RESERVED
+  CONFIRMED
+  CANCELLED
+  EXPIRED
+}
+
+model User {
+  id          String        @id @default(uuid())
+  name        String
+  email       String        @unique
+  password    String
+  createdAt   DateTime      @default(now())
+
+  bookings    Booking[]
+  reservations Reservation[]
+
+  @@map("users")
+}
+
+model Pitch {
+  id            String    @id @default(uuid())
+  name          String
+  location      String
+  pricePerHour  Decimal   @db.Decimal(10,2)
+
+  slots         Slot[]
+  bookings      Booking[]
+
+  @@map("pitches")
+}
+
+model Slot {
+  id          String      @id @default(uuid())
+
+  pitchId     String
+  pitch       Pitch       @relation(fields: [pitchId], references: [id])
+
+  startTime   String
+  endTime     String
+
+  status      SlotStatus  @default(AVAILABLE)
+
+  bookings    Booking[]
+  reservations Reservation[]
+
+  @@map("slots")
+}
+
+model Reservation {
+  id          String      @id @default(uuid())
+
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+
+  slotId      String
+  slot        Slot        @relation(fields: [slotId], references: [id])
+
+  expiresAt   DateTime
+
+  createdAt   DateTime    @default(now())
+
+  @@unique([slotId])
+  @@map("reservations")
+}
+
+model Booking {
+  id            String         @id @default(uuid())
+
+  userId        String
+  user          User           @relation(fields: [userId], references: [id])
+
+  pitchId       String
+  pitch         Pitch          @relation(fields: [pitchId], references: [id])
+
+  slotId        String
+  slot          Slot           @relation(fields: [slotId], references: [id])
+
+  bookingDate   DateTime
+
+  status        BookingStatus  @default(CONFIRMED)
+
+  createdAt     DateTime       @default(now())
+
+  @@unique([slotId, bookingDate])
+  @@map("bookings")
+}
