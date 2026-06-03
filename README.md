@@ -62,8 +62,9 @@ A real-time cricket pitch booking platform that allows users to check pitch avai
 - PostgreSQL
 
 ---
+## 📂 Project Structure
 
-📂 Project Structure
+```text
 cricket-pitch-booking-system
 │
 ├── frontend/
@@ -106,7 +107,10 @@ cricket-pitch-booking-system
 ---
 
 ## ⚙️ Setup Instructions
-Clone Repository
+
+### Clone Repository
+
+```bash
 git clone https://github.com/AmarDeepCodesAI/cricket-pitch-booking-system.git
 
 cd cricket-pitch-booking-system
@@ -114,20 +118,25 @@ cd cricket-pitch-booking-system
 
 ---
 
-## Frontend Setup
+### Frontend Setup
+
+```bash
 cd frontend
 
 npm install
 
 npm run dev
+```
 
 Frontend runs on:
 
+```text
 http://localhost:3000
+```
 
 ---
 
-## Backend Setup
+### Backend Setup
 
 ```bash
 cd backend
@@ -139,8 +148,9 @@ npm run dev
 
 Backend runs on:
 
-```bash
+```text
 http://localhost:5000
+```
 ```
 
 ---
